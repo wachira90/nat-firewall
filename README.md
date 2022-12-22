@@ -11,13 +11,13 @@ net.ipv4.ip_forward = 1
 echo 1 > /proc/sys/net/ipv4/ip_forward
 ````
 
-## check command 
+## check command and reboot
 
 ````
 cat /proc/sys/net/ipv4/ip_forward
 ````
 
-## reboot
+## POSTROUTING MASQUERADE
 
 ````
 iptables -t nat -A POSTROUTING -s 192.168.11.0/24 -o eth0 -j MASQUERADE
