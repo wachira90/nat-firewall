@@ -37,6 +37,14 @@ iptables -t nat -A POSTROUTING -s <วงIPภายใน>/24 -o <LAN ขาอ
 /sbin/iptables -X
 ````
 
+## clear firewall
+
+````
+iptables -F
+iptables -t nat -F
+iptables -X
+````
+
 ## check nat command
 
 ````
